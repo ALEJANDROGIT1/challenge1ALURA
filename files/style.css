@@ -1,0 +1,176 @@
+*, body{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  height: 100%;
+}
+body{
+  background-color: #F3F5FC;
+  height: 100vh;
+}
+
+.main{
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 5vh;
+}
+.logo{
+  position: relative;
+  top: 40px;
+  left: -15vw;
+  width: 60%;
+  height: 48px;
+}
+.inputs{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 360px;
+  padding-top: 100px;
+  align-items: center;
+}
+.inputs textarea{
+  
+  font-size: 16px;
+  width: 90%;
+  height: 90%;
+  border: none;
+  background-color: #F3F5FC;
+  padding:10px;
+  margin-bottom: 10px;
+}
+.inputs textarea:focus{
+  outline: 1px solid #0A3871;
+}
+.exclamacion{
+  vertical-align: text-bottom;
+  padding-right: 10px;
+  width: 25px;
+}
+.aclaracion{
+  display: inline;
+  align-self: flex-start;
+  padding-bottom: 10px;
+  padding-left: 10px;
+}
+.botones{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.botones input, .copiar{
+  height: 2.5rem;
+  border-radius: 23px;
+  border: none;
+  font-size: 16px;
+}
+#enc{
+  color:white;
+  background-color: #0A3871;
+  width: 40%;
+}
+#enc:hover{
+  background-color: #0a3871cc;
+  cursor: pointer;
+}
+#dec,.copiar{
+  color: #0A3871;
+  background-color: #D8DFE8;
+  border: 1px solid #0A3871;
+  width: 40%;
+}
+#dec:hover, .copiar:hover{
+  background-color: #d8dfe8a1;
+  cursor: pointer;
+}
+#enc:hover:active, #dec:hover:active{
+  transform:translateY(2px);
+}
+.copiar{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.copiar:hover:active{
+  transform: translate(-65px) scaleX(1.1);
+  
+}
+
+.resultado{
+  margin: 40px;
+  justify-content: center;
+  padding: 40px;
+  background-color: white;
+  border-radius: 32px;
+  text-align: center  ;
+  width: 250px;
+  height: 440px;
+  position: relative;
+  top:10px;
+  bottom: 10px;
+  box-shadow: 1px 25px 30px 2px rgba(0,0,0,0.07);
+  -webkit-box-shadow: 1px 25px 30px 2px rgba(0,0,0,0.07);
+  -moz-box-shadow: 1px 25px 30px 2px rgba(0,0,0,0.07);
+}
+.resultado img{
+  width: 250px;
+}
+footer{
+  height: 5vh;
+  line-height: 5vh;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 1030px) {
+  .botones{
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  #enc{
+    width: 90%;
+  }
+  #dec{
+    width: 90%;
+  }
+  #muneco{
+    display: none;
+  }
+  .aclaracion{
+    font-size: 0.7rem;
+  }
+  .exclamacion{
+    width: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .botones{
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  #enc{
+    width: 90%;
+  }
+  #dec{
+    width: 90%;
+  }
+  .aclaracion{
+    font-size: 0.7rem;
+  }
+  .exclamacion{
+    width: 20px;
+  }
+}
